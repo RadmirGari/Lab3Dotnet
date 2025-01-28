@@ -431,3 +431,10 @@
 /Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
 /Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
 /Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/app.db
+/Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Embedded.dll
+/Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/Microsoft.Extensions.Identity.Core.dll
+/Users/radmirgaripov/Lab1DotNet/CommunityApp/bin/Debug/net9.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/radmirgaripov/Lab1DotNet/CommunityApp/obj/Debug/net9.0/CommunityApp.sourcelink.json

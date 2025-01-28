@@ -13,7 +13,6 @@ namespace CommunityApp.Data.Migrations
     [Migration("20250128022230_InitialCreate")]
     partial class InitialCreate
     {
-        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
