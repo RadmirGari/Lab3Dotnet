@@ -5,7 +5,7 @@ namespace CommunityApp.Models
 {
     public class Province
     {
-         [Key]
+    [Key]
     public string ProvinceCode { get; set; }
 
     [Required]

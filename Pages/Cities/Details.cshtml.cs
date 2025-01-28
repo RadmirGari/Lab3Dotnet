@@ -21,23 +21,23 @@ namespace CommunityApp.Pages.Cities
 
         public City City { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+       public async Task<IActionResult> OnGetAsync(int? id)
+        {   
+        if (id == null)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var city = await _context.Cities.FirstOrDefaultAsync(m => m.CityId == id);
-
-            if (city is not null)
-            {
-                City = city;
-
-                return Page();
-            }
-
             return NotFound();
         }
+
+        City = await _context.Cities
+            .Include(c => c.Province) 
+            .FirstOrDefaultAsync(m => m.CityId == id);
+
+        if (City == null)
+        {
+            return NotFound();
+        }
+
+        return Page();
+    }
     }
 }

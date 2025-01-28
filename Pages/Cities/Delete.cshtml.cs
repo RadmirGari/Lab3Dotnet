@@ -22,23 +22,23 @@ namespace CommunityApp.Pages.Cities
         [BindProperty]
         public City City { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? id)
-        {
+      public async Task<IActionResult> OnGetAsync(int? id)
+        {   
             if (id == null)
             {
                 return NotFound();
             }
 
-            var city = await _context.Cities.FirstOrDefaultAsync(m => m.CityId == id);
+            City = await _context.Cities
+                .Include(c => c.Province) 
+                .FirstOrDefaultAsync(m => m.CityId == id);
 
-            if (city is not null)
+            if (City == null)
             {
-                City = city;
-
-                return Page();
+                return NotFound();
             }
 
-            return NotFound();
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
