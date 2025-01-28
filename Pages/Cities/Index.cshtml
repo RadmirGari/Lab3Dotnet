@@ -1,0 +1,48 @@
+@page
+@model CommunityApp.Pages.Cities.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.City[0].CityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City[0].Population)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City[0].Province)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.City) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CityName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Population)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Province.ProvinceCode)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CityId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CityId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CityId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
